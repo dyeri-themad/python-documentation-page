@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Python Documentation Page</title>
+	<link rel="stylesheet" type="text/css" href="index_style.css">
+</head>
+<body>
+	<nav id="navbar">
+	  	</label>
+		<header>Python Documentation</header>
+		<ul>
+			<li><a class="nav-link" href="#Introduction">Introduction</a></li>
+		    <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+		    <li><a class="nav-link" href="#Comment">Comment</a></li>
+		    <li>
+		    	<a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+		    </li>
+		    <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
+		    <li><a class="nav-link" href="#Data_types">Data types</a></li>
+		    <li>
+		    	<a class="nav-link" href="#if...else_statement">if...else statement</a>
+		    </li>
+		    <li><a class="nav-link" href="#while_statement">while statement</a></li>
+		    <li>
+		    	<a class="nav-link" href="#Function_declarations"
+		        >Function declarations</a>
+		    </li>
+		    <li><a class="nav-link" href="#Reference">Reference</a></li>
+		</ul>
+	</nav>
+	<main id="main-doc">
+	  <section class="main-section" id="Introduction">
+	    <header>Introduction</header>
+	    <article>
+	    	<h3>What is Python?</h3>
+	      	<p>
+	        	Python is a popular programming language. It was created by Guido van Rossum, and released in 1991. It is used for:web development (server-side), software development,  mathematics, system scripting.
+		    </p>
+		    <h3>What can Python do?</h3>
+		    <p>
+		    	Python can be used on a server to create web applications. Python can be used alongside software to create workflows. Python can connect to database systems. It can also read and modify files. Python can be used to handle big data and perform complex mathematics. Python can be used for rapid prototyping, or for production-ready software development.
+		    </p> 
+		    <h3>Why Python?</h3>
+		    <p>
+		    	Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc). Python has a simple syntax similar to the English language. Python has syntax that allows developers to write programs with fewer lines than some other programming languages. Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick. Python can be treated in a procedural way, an object-oriented way or a functional way.
+		    </p>
+	    </article>
+	  </section>
+	  <section class="main-section" id="Hello_world">
+	    <header>Hello world</header>
+	    <article>
+	       	<p>
+	       		Python syntax can be executed by writing directly in the Command Line:
+	      	</p>
+	      	<code
+	       		>>> print("Hello, World!")
+	       		Hello, World!
+	      	</code>
+	    </article>
+	  </section>
+	  <section class="main-section" id="Comment">
+	  	<header>Creating a Comment</header>
+	  	<article>
+	  		<p>
+	  			Comments starts with a #, and Python will ignore them:
+	  		</p>
+	  		<code>#This is a comment
+				print("Hello, World!")
+	  		</code>
+	  		<p>
+	  			Comments can be placed at the end of a line, and Python will ignore the rest of the line:
+	  		</p>
+	  		<code>print("Hello, World!") #This is a comment</code>
+	  	</article>
+	  </section>
+	  <section class="main-section" id="Declaring_variables">
+	    <header>Declaring variables</header>
+	    <article>
+	    	<p>
+	      		Python has no command for declaring a variable.
+				A variable is created the moment you first assign a value to it.
+	      	</p>
+	      	<code>x = 5
+				y = "John"
+				print(x)
+				print(y)	
+	      	</code>
+	      	<p>
+	      		variables do not need to be declared with any particular type, and can even change type after they have been set.
+	      	</p>
+	      	<code>x = 4       #x is of type int
+				x = "Sally"   #x is now of type str
+				print(x)
+			</code>
+	    </article>
+	  </section>
+	  <section class="main-section" id="Global_variables">
+	    <header>Global variables</header>
+	    <article>
+	    	<p>
+	     		Variables that are created outside of a function (as in all of the examples above) are known as global variables. Global variables can be used by everyone, both inside of functions and outside.
+	     	</p>
+	     	<code>x = "awesome"
+
+				def myfunc():
+				  print("Python is " + x)
+
+				myfunc()
+	     	</code>
+	     	<p>
+	     		If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value.
+	     	</p>
+	    </article>
+	  </section>
+	  <section class="main-section" id="Data_types">
+	    <header>Data types</header>
+	    <article>
+	      <h3>Built-in Data Types</h3>
+	      <p>
+	      	In programming, data type is an important concept. Variables can store data of different types, and different types can do different things. Python has the following data types built-in by default, in these categories:
+	      </p>
+	      <ul>
+	      	<li>Text Type:	str</li>
+	      	<li>Numeric Types:	int, float, complex</li>
+	      	<li>Sequence Types:	list, tuple, range</li>
+	      	<li>Mapping Type:	dict</li>
+	      	<li>Set Types:	set, frozenset</li>
+	      	<li>Boolean Type:	bool</li>
+	      	<li>Binary Types:	bytes, bytearray, memoryview</li>
+	      </ul>
+	      <h3>Getting the Data Type</h3>
+	      <p>
+	      	You can get the data type of any object by using the type() function:
+	      </p>
+	      <code>x = 5
+			print(type(x))
+	      </code>
+	    </article>
+	  </section>
+	  <section class="main-section" id="if...else_statement">
+	    <header>if...else statement</header>
+	    <article>
+	     	<p>
+	     		Python supports the usual logical conditions from mathematics:
+	     	</p>
+	     	<ul>
+	     		<li>Equals: a == b</li>
+	     		<li>Not Equals: a != b</li>
+	     		<li>Less than: a < b</li>
+	     		<li>Less than or equal to: a <= b</li>
+	     		<li>Greater than: a > b</li>
+	     		<li>Greater than or equal to: a >= b</li>
+	     	</ul>
+	     	<p>
+	     		These conditions can be used in several ways, most commonly in "if statements" and loops.
+	     	An "if statement" is written by using the if keyword.
+	     	</p>
+	     	<code>a = 33
+				b = 200
+				if b > a:
+				  print("b is greater than a")
+	     	</code>
+	     	<p>
+	     		In this example we use two variables, a and b, which are used as part of the if statement to test whether b is greater than a. As a is 33, and b is 200, we know that 200 is greater than 33, and so we print to screen that "b is greater than a".
+	     	</p>
+	     	<h3>Elif</h3>
+	     	<p>
+	     		The elif keyword is pythons way of saying "if the previous conditions were not true, then try this condition".
+	     	</p>
+	     	<code>a = 33
+				b = 33
+				if b > a:
+				  print("b is greater than a")
+				elif a == b:
+				  print("a and b are equal")
+	     	</code>
+	     	<p>
+	     		In this example a is equal to b, so the first condition is not true, but the elif condition is true, so we print to screen that "a and b are equal".
+	     	</p>
+	     	<h3>Else</h3>
+	     	<p>
+	     		The else keyword catches anything which isn't caught by the preceding conditions.
+	     	</p>
+	     	<code>a = 200
+				b = 33
+				if b > a:
+				  print("b is greater than a")
+				elif a == b:
+				  print("a and b are equal")
+				else:
+				  print("a is greater than b")
+	     	</code>
+	     	<p>
+	     		In this example a is greater than b, so the first condition is not true, also the elif condition is not true, so we go to the else condition and print to screen that "a is greater than b".
+	     	</p>
+			<p>
+				You can also have an else without the elif:
+			</p>
+	     	<code>a = 200
+				b = 33
+				if b > a:
+				  print("b is greater than a")
+				else:
+				  print("b is not greater than a")
+	     	</code>
+	    </article>
+	  </section>
+	  <section class="main-section" id="while_statement">
+	    <header>while statement</header>
+	    <article>
+	    	<p>
+	      		With the while loop we can execute a set of statements as long as a Condition is true.
+	      	</p>
+	      	<code>i = 1
+				while i < 6:
+				  print(i)
+				  i += 1
+	      	</code>
+	      	<p>
+	      		<strong>Note:</strong> remember to increment i, or else the loop will continue forever.
+	      	</p>
+	      	<p>
+	      		The while loop requires relevant variables to be ready, in this example we need to define an indexing variable, i, which we set to 1.
+	      	</p>
+	    </article>
+	  </section>
+	  <section class="main-section" id="Function_declarations">
+	    <header>Function declarations</header>
+	    <article>
+	     	<p>
+	     		A function is a block of code which only runs when it is called.
+				You can pass data, known as parameters, into a function.
+				A function can return data as a result.
+			</p>
+			<h3>Creating a Function</h3>
+			<p>
+				In Python a function is defined using the def keyword:
+			</p>
+			<code>def my_function():
+ 				 print("Hello from a function")
+			</code>
+			<h3>Calling a Function</h3>
+			<p>
+				To call a function, use the function name followed by parenthesis:
+			</p>
+			<code>def my_function():
+				  print("Hello from a function")
+
+				my_function()
+			</code>
+			<h3>Arguments</h3>
+			<p>
+				Information can be passed into functions as arguments.
+			</p>
+			<p>
+				Arguments are specified after the function name, inside the parentheses. You can add as many arguments as you want, just separate them with a comma.
+			</p>
+			<p>
+				The following example has a function with one argument (fname). When the function is called, we pass along a first name, which is used inside the function to print the full name:
+			</p>
+			<code>def my_function(fname):
+				  print(fname + " Refsnes")
+
+				my_function("Emil")
+				my_function("Tobias")
+				my_function("Linus")
+			</code>
+			<strong>Arguments are often shortened to args in Python documentations.</strong>
+	    </article>
+	  </section>
+	  <section class="main-section" id="Reference">
+	    <header>Reference</header>
+	    <article>
+	      <ul>
+	        <li>
+	          All the documentation in this page is taken from
+	          <a
+	            href="https://www.w3schools.com/python/"
+	            target="_blank"
+	            >w3schools.com</a
+	          >
+	        </li>
+	      </ul>
+	    </article>
+	  </section>
+	</main>
+
+</body>
+</html>
